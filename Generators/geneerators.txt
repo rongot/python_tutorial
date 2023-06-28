@@ -1,0 +1,14 @@
+Generators
+
+Generators are iterators
+Generators can be created with generator functions
+Generator functions use the yield keyword
+Generators can be created with generator expressions
+
+
+Functions vs Generator Functions
+
+Functions	                             |    Generator Functions
+uses return	                             |   uses yield
+returns once	                         |   can yield multiple times
+When invoked returns the return value    |	 When invoked, returns a Generator

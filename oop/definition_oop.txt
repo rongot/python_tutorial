@@ -1,0 +1,82 @@
+What is OOP?
+
+Object oriented programming is a method of programming
+that attempts to model some process or thing in the world as a class or object.
+
+class - a blueprint for objects. 
+Classes can contain methods (functions) and attributes (similar to keys in a dict).
+
+instance - objects that are constructed from a class
+ blueprint that contain their class's methods and properties.
+
+Why OOP?
+
+With object oriented programming,
+ the goal is to encapsulate your code into logical, hierarchical groupings using classes
+ so that you can reason about your code at a higher level.
+
+Encapsulation
+
+Encapsulation - the grouping of public and private attributes and methods into a programmatic class,
+making abstraction possible
+
+Abstraction
+
+Abstraction - exposing only "relevant" data in a class interface,
+hiding private attributes and methods (aka the "inner workings") from users
+
+Classes in Python can have a special __init__ method, 
+which gets called every time you create an instance of the class (instantiate).
+
+self
+The self keyword refers to the current class instance.
+self must always be the first parameter to __init__ and any methods and properties on class instances.
+
+Class Attributes
+
+We can also define attributes directly on a class that are shared by all instances of a class
+and the class itself.
+
+Class Methods
+
+ -- Class methods are methods (with the @classmethod decorator) that are not concerned with instances,
+ but the class itself.
+ -- The first argument is cls (for class) instead of self. Like self, 
+ it does not need to be passed in explicitly.
+ -- Class methods are available on the class itself and any instances of the class, 
+ and are mostly used for building new instances of classes.
+
+ Inheritance
+
+A key feature of OOP is the ability to define a class which inherits from another class
+ (a "base" or "parent" class).
+
+In Python, inheritance works by passing the parent class as an argument to the definition of a child class:
+
+super
+The super() keyword allows us to call the __init__ function of a parent class
+
+Multiple Inheritance
+
+Method Resolution Order (MRO)
+
+Whenever you create a class, Python sets a Method Resolution Order, or MRO, for that class,
+which is the order in which Python will look for methods on instances of that class.
+You can programmatically reference the MRO three ways:
+
+__mro__ attribute on the class
+use the mro() method on the class
+use the builtin help(cls) method
+
+Polymorphism
+
+A key principle in OOP is the idea of polymorphism - an object can take on many (poly) forms (morph).
+
+While a formal definition of polymorphism is more difficult, here are two important practical applications:
+1. The same class method works in a similar way for different classes
+ 1.1. A common implementation of this is to have a method in a base (or parent) class that is overridden by a subclass.
+     * This is called method overriding.
+     * Each subclass will have a different implementation of the method.
+     If the method is not implemented in the subclass, the version in the parent class is called instead.
+2. The same operation works for different kinds of objects
+   Python classes have special (also known as "magic") methods, that are dunders (i.e. double underscore-named). 
