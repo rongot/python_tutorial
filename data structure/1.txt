@@ -1,0 +1,11 @@
+Main Concepts
+Before going more in depth on what linked lists are and how you can use them,
+you should first learn how they are structured. Each element of a linked list is called a node,
+and every node has two different fields:
+
+Data contains the value to be stored in the node.
+Next contains a reference to the next node on the list.
+Here’s what a typical node looks like:
+
+Example Node of a Linked List
+Node
